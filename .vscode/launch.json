@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Post",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/NeissDataParser/bin/Debug/net9.0/NeissDataParser.dll",
+            "args": [ "post", "-u",
+                "${env:BLUESKY_HANDLE}",
+                "-p",
+                "${env:BLUESKY_PASSWORD}", "-v" ],
+            "cwd": "${workspaceFolder}/src/NeissDataParser/bin/Debug/net9.0/",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Insert2023",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/NeissDataParser/bin/Debug/net9.0/NeissDataParser.dll",
+            "args": [ "insert", "${workspaceFolder}/../neiss2023.tsv", "-f", "${workspaceFolder}/../neiss_fmt.txt", "-v" ],
+            "cwd": "${workspaceFolder}/src/NeissDataParser/bin/Debug/net9.0/",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Insert2018",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/NeissDataParser/bin/Debug/net9.0/NeissDataParser.dll",
+            "args": [ "insert", "${workspaceFolder}/../neiss2018.tsv", "-f", "${workspaceFolder}/../neiss_fmt.txt", "-v" ],
+            "cwd": "${workspaceFolder}/src/NeissDataParser/bin/Debug/net9.0/",
+            "console": "internalConsole",
+            "stopAtEntry": false
+        },
+    ]
+}
