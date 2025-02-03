@@ -39,7 +39,7 @@ public class DatabaseService
 
     public async Task<List<IncidentRecord>> GetMaleGenitalInjuriesAsync()
     {
-        return await _connection.Table<IncidentRecord>().Where(r => r.Age > 12 && r.Age <= 100 && !r.Blocked && !r.HasSeen && r.Gender == Gender.Male && (r.BodyPart == 38 || r.BodyPart2 == 38)).ToListAsync();
+        return await _connection.Table<IncidentRecord>().Where(r => r.Age > 17 && r.Age <= 100 && !r.Blocked && !r.HasSeen && r.Gender == Gender.Male && (r.BodyPart == 38 || r.BodyPart2 == 38)).ToListAsync();
     }
 
     public async Task<int> ResetSeenAsync()
